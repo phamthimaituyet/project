@@ -13,34 +13,36 @@
         <% end %>
   
     <div class="container">
-        <div>
-            <%= f.label :email %>:
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="card-body">
+            <div>
+                <%= f.label :email %>:
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+      
+            <div>
+                <%= f.label :name %>:
+                <%= f.text_field :name, :size => 40 %>
+            </div>
+      
+            <div>
+                <%= f.label :password, 'Password' %>:
+                <%= f.password_field :password, :size => 40 %>
+            </div>
+       
+            <div>
+                <%= f.label :password_confirmation, 'Confirm' %>:
+                <%= f.password_field :password_confirmation, :size => 40 %>
+            </div>
+            
+             <div class="field">
+                <%= f.label :avatar %>
+                <%= f.file_field :avatar %><br>
+             </div>
+      
+            <div class="submit">
+                <%= f.submit %>
+            </div> 
         </div>
-  
-        <div>
-            <%= f.label :name %>:
-            <%= f.text_field :name, :size => 40 %>
-        </div>
-  
-        <div>
-            <%= f.label :password, 'Password' %>:
-            <%= f.password_field :password, :size => 40 %>
-        </div>
-   
-        <div>
-            <%= f.label :password_confirmation, 'Confirm' %>:
-            <%= f.password_field :password_confirmation, :size => 40 %>
-        </div>
-        
-         <div class="field">
-            <%= f.label :avatar %>
-            <%= f.file_field :avatar %><br>
-         </div>
-  
-        <div>
-            <%= f.submit %>
-        </div> 
     </div>
 
     <% end %>
